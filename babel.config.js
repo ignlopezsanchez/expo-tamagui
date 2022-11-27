@@ -4,9 +4,14 @@ module.exports = function (api) {
     presets: ["babel-preset-expo"],
     plugins: [
       [
-        "transform-inline-environment-variables",
+        "module:react-native-dotenv",
         {
-          include: "TAMAGUI_TARGET",
+          moduleName: "@env",
+          path: ".env",
+          blacklist: null,
+          whitelist: null,
+          safe: false,
+          allowUndefined: true,
         },
       ],
     ],

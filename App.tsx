@@ -1,15 +1,25 @@
 import { TamaguiProvider, Button } from "tamagui";
 import { Text } from "react-native";
+import { TAMAGUI_TARGET } from "@env";
 
 import config from "./tamagui.config";
 
-process.env.TAMAGUI_TARGET = "native expo start";
-
 const Test = () => {
   return (
-    <Button>
-      <Text>Button</Text>
-    </Button>
+    <>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>Text</Text>
+      <Text>target {TAMAGUI_TARGET}</Text>
+      <Button>
+        <Text>{TAMAGUI_TARGET}</Text>
+      </Button>
+    </>
   );
 };
 export default function App() {
